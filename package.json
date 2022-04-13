@@ -1,0 +1,23 @@
+{
+  "name": "space-tourism-challange",
+  "version": "1.0.0",
+  "description": "This repo is for Challange from [Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3) to practise SCSS and overall front-end skill",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bushenzie/Space-tourism-challange.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bushenzie/Space-tourism-challange/issues"
+  },
+  "homepage": "https://github.com/Bushenzie/Space-tourism-challange#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
