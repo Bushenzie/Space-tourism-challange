@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import "./vars.scss";
+
+// font-family: 'Barlow Condensed', sans-serif; -- subH2 , nav
+// font-family: 'Bellefair', serif; -- Everything else
+
+
+body {
+    display: grid;
+    grid-template: 1fr 4fr / 1fr;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFF;
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Bellefair', serif;
+    }
+    p {
+        font-family: 'Barlow Condensed', sans-serif; 
+    }
+}
+
+
+.upper-part {
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .logo {
+        margin-left: 5vw;
+
+        img {
+            width: 110%;
+        }
+    }
+
+
+    .nav {
+        position: relative;
+        height: 50%;
+        font-size: 18px;
+        letter-spacing: 2.7px;
+        background-color: rgba(255, 255, 255, .1);  
+        backdrop-filter: blur(2rem);
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 3rem;
+            padding: 0 15rem 0 10rem;
+            margin: 0;
+
+            li {
+                display: flex;
+                cursor: pointer;
+                box-sizing: border-box;
+                align-items: center;
+                gap: .75rem;
+                height: 100%;
+
+                &:hover {
+                    position:relative;
+                    top: .1rem;
+                    border-bottom: .2rem solid #FFF;
+                }   
+            }
+            
+        }
+
+        .num {
+            font-weight: 600;
+        }
+
+        .num , .item a {
+            color: #FFF;
+            text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+    }
+
+    .line {
+        position: absolute;
+        width: 35%;
+        opacity: .2;
+        z-index: 2;
+        left: 15%;
+        background-color: #FFF;
+        height: 1px;
+    }
+}
+
+.lower-part {
+    grid-row: 2 / 3;
+    height: 80%;
+    display: grid;
+    align-items: flex-end;
+
+    grid-template: 1fr / 1fr 1fr;
+    margin: 0 11.5%;
+
+
+
+
+    .text {
+        grid-column: 1 / 2;
+        width: 65%;
+
+        .sub-heading {
+            font-size: 30px;
+            font-weight: 200;
+            letter-spacing: 2.35px;
+            font-family: 'Barlow Condensed', sans-serif; 
+            color: #FFF;
+        }
+
+        .heading {
+            width: 100%;
+            font-weight: 400;
+            position: relative;
+            margin: 0;
+            font-size: 150px;
+        }
+
+        .text {
+            width: 100%;
+            font-size: 18px;
+            width: 100%;
+            text-align:justify;
+            font-family: 'Barlow Condensed', sans-serif; 
+            line-height: 2;
+        }
+    }
+
+    .explore {
+        grid-column: 2 / 3;
+        display: flex;
+        justify-content: flex-end;
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            width: 17rem;
+            height: 17rem;
+            background-color: #FFF;
+            color: $dark-color;
+            border-radius: 100%;
+            text-align: center;
+
+        }
+        
+    }
+}

@@ -1,1 +1,194 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 4fr;
+  -ms-grid-columns: 1fr;
+      grid-template: 1fr 4fr / 1fr;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #FFF;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: 'Bellefair', serif;
+}
+
+body p {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.upper-part {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.upper-part .logo {
+  margin-left: 5vw;
+}
+
+.upper-part .logo img {
+  width: 110%;
+}
+
+.upper-part .nav {
+  position: relative;
+  height: 50%;
+  font-size: 18px;
+  letter-spacing: 2.7px;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+}
+
+.upper-part .nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  gap: 3rem;
+  padding: 0 15rem 0 10rem;
+  margin: 0;
+}
+
+.upper-part .nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .75rem;
+  height: 100%;
+}
+
+.upper-part .nav ul li:hover {
+  position: relative;
+  top: .1rem;
+  border-bottom: .2rem solid #FFF;
+}
+
+.upper-part .nav .num {
+  font-weight: 600;
+}
+
+.upper-part .nav .num, .upper-part .nav .item a {
+  color: #FFF;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.upper-part .line {
+  position: absolute;
+  width: 35%;
+  opacity: .2;
+  z-index: 2;
+  left: 15%;
+  background-color: #FFF;
+  height: 1px;
+}
+
+.lower-part {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr / 1fr 1fr;
+  margin: 0 11.5%;
+}
+
+.lower-part .text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  width: 65%;
+}
+
+.lower-part .text .sub-heading {
+  font-size: 30px;
+  font-weight: 200;
+  letter-spacing: 2.35px;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #FFF;
+}
+
+.lower-part .text .heading {
+  width: 100%;
+  font-weight: 400;
+  position: relative;
+  margin: 0;
+  font-size: 150px;
+}
+
+.lower-part .text .text {
+  width: 100%;
+  font-size: 18px;
+  width: 100%;
+  text-align: justify;
+  font-family: 'Barlow Condensed', sans-serif;
+  line-height: 2;
+}
+
+.lower-part .explore {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.lower-part .explore h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  width: 17rem;
+  height: 17rem;
+  background-color: #FFF;
+  color: #0B0D17;
+  border-radius: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
