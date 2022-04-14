@@ -21,6 +21,12 @@ export class Event {
         });
     }
 
+    SetMain() {
+        Elements.Content().explore.addEventListener("click",()=> {
+            this.SwitchPage("destination");
+        })
+    }
+
 
     SwitchPage(page) {
         Elements.Content().body.removeAttribute("id");

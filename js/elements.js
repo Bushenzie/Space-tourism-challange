@@ -18,6 +18,7 @@ export class Element {
     Content() {
         return {
             body: document.body,
+            explore: document.querySelector(".explore"),
         }
     }
 }

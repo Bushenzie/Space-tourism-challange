@@ -12,6 +12,7 @@ document.addEventListener("load", ()=> {
 
 console.log(Storage.GetCurrentPage());
 Events.SetNav();
+Events.SetMain();
 
 if(!Storage.GetCurrentPage()) {
     Storage.SetCurrentPage("home");
