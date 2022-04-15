@@ -127,16 +127,14 @@ body {
     }
 }
 
-.lower-part {
+
+.lower-part-main {
     grid-row: 2 / 3;
-    height: 80%;
     display: grid;
-    align-items: flex-end;
-
     grid-template: 1fr / 1fr 1fr;
+    height: 80%;
     margin: 0 11.5%;
-
-
+    align-items: flex-end;
 
 
     .text {
@@ -213,5 +211,56 @@ body {
 
         }
         
+    }
+}
+
+.lower-part-dist {
+    height: 100%;
+    grid-row: 2 / 3;
+    margin: 0 11.5%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    align-items: center;
+
+    .planet-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {   
+            width: 80%;
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+            margin: 0 3%;
+            font-size: 150px;
+            font-weight: 400;
+        }
+
+        .text {
+            margin: 0 1.5%;
+            font-size: 22px;
+        }
+
+        .line {
+            opacity: .3;
+            width: 100%;
+            height: 1px;
+            background-color: #FFF;
+            margin: 5% 3%;
+        }
+
+        .info {
+            display: flex;
+            gap: 10%;
+            font-size: 28px;
+            font-weight: 400;
+            margin: 0 3%;
+        }
     }
 }

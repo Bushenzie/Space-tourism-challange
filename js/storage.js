@@ -12,7 +12,27 @@ export class LC {
 
     }
 
-    LoadPage() {
-        Events.SwitchPage(localStorage.getItem("page"));
+    async LoadPage() {
+        this.GetDataFromJSON();        
+    }
+
+    GetDataFromJSON() {
+        FetchData()
+            .then(results => {
+                Events.SwitchPage(localStorage.getItem("page"),results);
+            }).catch(() => {
+                console.log("error");
+            })
+
+        async function FetchData() {
+            const fetched = await fetch("../dist/data.json");
+            const jsonData = await fetched.json();
+            return {
+                destinations: jsonData.destinations,
+                technologies: jsonData.technology,
+                crew: jsonData.crew
+            };
+        }
+
     }
 }
