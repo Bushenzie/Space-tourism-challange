@@ -21,4 +21,13 @@ export class Element {
             explore: document.querySelector(".explore"),
         }
     }
+
+    PlanetSelection() {
+        return {
+            moon: document.querySelector("li#moon-select"),
+            mars: document.querySelector("li#mars-select"),
+            europa: document.querySelector("li#europa-select"),
+            titan: document.querySelector("li#titan-select"),
+        }
+    }
 }

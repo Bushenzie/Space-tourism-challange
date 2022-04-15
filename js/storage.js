@@ -9,11 +9,18 @@ export class LC {
 
     SetCurrentPage(page) {
         localStorage.setItem("page", page);
+    }
 
+    GetCurrentPlanet() {
+        return localStorage.getItem("i");
+    }
+
+    SetCurrentPlanet(id) {
+        localStorage.setItem("i", id);
     }
 
     async LoadPage() {
-        this.GetDataFromJSON();        
+        await this.GetDataFromJSON();        
     }
 
     GetDataFromJSON() {
