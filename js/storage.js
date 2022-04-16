@@ -53,7 +53,7 @@ export class LC {
             })
 
         async function FetchData() {
-            const fetched = await fetch("../dist/data.json");
+            const fetched = await fetch("./data.json");
             const jsonData = await fetched.json();
             return {
                 destinations: jsonData.destinations,
