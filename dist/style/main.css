@@ -1011,15 +1011,16 @@ body#technology {
     margin-top: 20%;
   }
   .lower-part-crew .text .sub-heading {
-    white-space: nowrap;
     font-size: 20px;
   }
   .lower-part-crew .text .heading {
-    white-space: nowrap;
     font-size: 35px;
   }
   .lower-part-crew .text .text {
     font-size: 15px;
+  }
+  .lower-part-tech .selection {
+    margin: 5% 0;
   }
   .lower-part-tech .selection ul {
     gap: 2rem;
@@ -1035,7 +1036,7 @@ body#technology {
     font-size: 18px;
   }
   .lower-part-tech .image {
-    height: auto;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

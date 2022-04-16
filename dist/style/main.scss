@@ -914,12 +914,10 @@ body {
             }
 
             .sub-heading {
-                white-space: nowrap;
                 font-size: 20px;
             }
 
             .heading {
-                white-space: nowrap;
                 font-size: 35px;
             }
             
@@ -931,7 +929,9 @@ body {
     }
 
     .lower-part-tech {
+
         .selection {
+            margin: 5% 0;
             ul {
                 gap: 2rem;
                 li {
@@ -952,7 +952,7 @@ body {
         }
 
         .image {
-            height: auto;
+            height: 100%;
         }
     }
 }
