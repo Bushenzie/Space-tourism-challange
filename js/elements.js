@@ -12,6 +12,14 @@ export class Element {
             technology: document.querySelector("li.tech"),
             crew: document.querySelector("li.crew"),
             destination: document.querySelector("li.dest"),
+            allHam: document.querySelectorAll("#hamList > li"),
+            hamburgerIcon: document.querySelector(".ham"),
+            hamburgerMenu: document.querySelector(".ham-menu"),
+            hamHome: document.querySelector("#hamList > li.home"),
+            hamTechnology: document.querySelector("#hamList > li.tech"),
+            hamCrew: document.querySelector("#hamList > li.crew"),
+            hamDestination: document.querySelector("#hamList > li.dest")
+
         }
     }
 

@@ -46,6 +46,10 @@ body#technology {
   background-image: url("../../assets/technology/background-technology-desktop.jpg");
 }
 
+.not-visible {
+  display: none;
+}
+
 .upper-part {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -120,10 +124,6 @@ body#technology {
   border-bottom: 0.2rem solid rgba(255, 255, 255, 0.5);
 }
 
-.upper-part .nav ul li.ham {
-  display: none;
-}
-
 .upper-part .nav .num {
   font-weight: 600;
 }
@@ -142,6 +142,86 @@ body#technology {
   z-index: 2;
   background-color: #FFF;
   height: 1px;
+}
+
+.upper-part .ham {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 4%;
+  right: 15%;
+}
+
+.upper-part .ham.opened img {
+  content: url("../../assets/shared/icon-close.svg");
+  width: 200%;
+  height: 200%;
+}
+
+.upper-part .ham.closed img {
+  content: url("../../assets/shared/icon-hamburger.svg");
+  width: 200%;
+  height: 200%;
+}
+
+.upper-part .ham-menu {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  height: 100%;
+  -ms-touch-action: none;
+      touch-action: none;
+  width: 60vw;
+}
+
+.upper-part .ham-menu ul {
+  position: relative;
+  top: 25%;
+  list-style: none;
+  padding: 0;
+  padding-left: 4%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.upper-part .ham-menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10%;
+}
+
+.upper-part .ham-menu ul li span {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #FFF;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+}
+
+.upper-part .ham-menu ul li span.num {
+  font-weight: 600;
+  width: 3rem;
+}
+
+.upper-part .ham-menu ul li span.item a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.upper-part .ham-menu ul li.selected {
+  font-weight: 600;
 }
 
 .lower-part {
@@ -615,7 +695,7 @@ body#technology {
         align-self: center;
     -ms-grid-column-align: center;
         justify-self: center;
-    height: 65%;
+    height: 75%;
   }
   .upper-part .logo img {
     width: 4rem;
@@ -632,6 +712,9 @@ body#technology {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 0 5vw;
+  }
+  .upper-part .ham {
+    display: none;
   }
   .lower-part-main {
     position: absolute;
@@ -736,7 +819,6 @@ body#technology {
     width: 100%;
   }
   .lower-part-crew .text ul {
-    margin-top: 20%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -745,9 +827,12 @@ body#technology {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
-    position: relative;
-    max-height: 130%;
-    min-height: 125%;
+  }
+  .lower-part-crew .person img {
+    position: absolute;
+    bottom: 0;
+    right: auto;
+    height: 50%;
   }
   .lower-part-tech {
     margin: 0;
@@ -806,6 +891,151 @@ body#technology {
     text-align: center;
     margin: 0 auto 20%;
     width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  body#home {
+    background-image: url("../../assets/home/background-home-mobile.jpg");
+  }
+  body#destination {
+    background-image: url("../../assets/destination/background-destination-mobile.jpg");
+  }
+  body#crew {
+    background-image: url("../../assets/crew/background-crew-mobile.jpg");
+  }
+  body#technology {
+    background-image: url("../../assets/technology/background-technology-mobile.jpg");
+  }
+  .upper-part .nav {
+    background: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  .upper-part .nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .upper-part .nav ul li {
+    display: none;
+  }
+  .upper-part .nav ul li.ham {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .upper-part .ham {
+    display: block;
+  }
+  .lower-part-main .text .sub-heading {
+    font-size: 22px;
+  }
+  .lower-part-main .text .heading {
+    font-size: 80px;
+  }
+  .lower-part-main .text .text {
+    font-size: 15px;
+  }
+  .lower-part-main .explore {
+    top: -10%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .lower-part-main .explore h2 {
+    width: 12rem;
+    height: 12rem;
+  }
+  .lower-part-dest .text ul li {
+    font-size: 23px;
+  }
+  .lower-part-dest .text .heading {
+    font-size: 80px;
+  }
+  .lower-part-dest .text .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lower-part-crew {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .lower-part-crew .person {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    height: auto;
+    position: relative;
+  }
+  .lower-part-crew .person img {
+    width: 50vw;
+    position: relative;
+  }
+  .lower-part-crew .person::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 70vw;
+    opacity: .3;
+    background-color: #FFF;
+  }
+  .lower-part-crew .text {
+    position: relative;
+    height: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .lower-part-crew .text ul {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+  }
+  .lower-part-crew .text .heading,
+  .lower-part-crew .text .sub-heading {
+    margin-top: 20%;
+  }
+  .lower-part-crew .text .sub-heading {
+    white-space: nowrap;
+    font-size: 20px;
+  }
+  .lower-part-crew .text .heading {
+    white-space: nowrap;
+    font-size: 35px;
+  }
+  .lower-part-crew .text .text {
+    font-size: 15px;
+  }
+  .lower-part-tech .selection ul {
+    gap: 2rem;
+  }
+  .lower-part-tech .selection ul li {
+    width: 4rem;
+    height: 4rem;
+  }
+  .lower-part-tech .text .heading {
+    font-size: 28px;
+  }
+  .lower-part-tech .text .text {
+    font-size: 18px;
+  }
+  .lower-part-tech .image {
+    height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

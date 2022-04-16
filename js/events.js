@@ -6,6 +6,7 @@ export class Event {
 
 
     SetNav() {
+        //Classic menu
         Elements.Nav().home.addEventListener("click",() => {
             this.SwitchPage("home");
             this.LoadPage("home");
@@ -19,13 +20,44 @@ export class Event {
         Elements.Nav().destination.addEventListener("click",() => {
             this.SwitchPage("destination");
         });
-    }
 
-    SetMain() {
-        Elements.Content().explore.addEventListener("click",()=> {
+
+        //Hamburger
+        Elements.Nav().hamHome.addEventListener("click",() => {
+            this.SwitchPage("home");
+            this.LoadPage("home");
+        });
+        Elements.Nav().hamTechnology.addEventListener("click",() => {
+            this.SwitchPage("technology");
+        });
+        Elements.Nav().hamCrew.addEventListener("click",() => {
+            this.SwitchPage("crew");
+        });
+        Elements.Nav().hamDestination.addEventListener("click",() => {
             this.SwitchPage("destination");
+        });
+
+        Elements.Nav().hamburgerIcon.addEventListener("click",() => {
+            if(Elements.Nav().hamburgerIcon.classList.contains("closed")) {
+                Elements.Nav().hamburgerIcon.classList.remove("closed");
+                Elements.Nav().hamburgerIcon.classList.add("opened");
+
+                Elements.Nav().hamburgerMenu.classList.remove("not-visible");
+
+
+
+            } else {
+                Elements.Nav().hamburgerIcon.classList.remove("opened");
+                Elements.Nav().hamburgerIcon.classList.add("closed");
+
+                Elements.Nav().hamburgerMenu.classList.add("not-visible");
+            }
+
         })
+
+
     }
+   
 
     LoadPage(page,data) {
         if(Elements.Content().body.querySelector(".lower-part")) {
@@ -262,8 +294,22 @@ export class Event {
         [...Elements.Nav().all].forEach(el => {
             el.classList.remove("selected");
         })
-        Storage.SetCurrentPage(String(page));
         Elements.Nav()[String(page)].classList.add("selected");
+
+
+
+
+        
+        [...Elements.Nav().allHam].forEach(el => {
+
+            el.classList.remove("selected");
+        })
+
+        let hamPage = "ham" + String(page)[0].toUpperCase() + String(page).slice(1,String(page).length);
+        Elements.Nav()[hamPage].classList.add("selected");
+        
+
+        Storage.SetCurrentPage(String(page));
         this.LoadPage(String(page),data);
     }
 }
