@@ -471,4 +471,117 @@ body#technology {
   right: auto;
   max-height: 80%;
 }
+
+.lower-part-tech {
+  height: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  margin: 0 11.5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: .5fr 3fr 1fr;
+      grid-template: 1fr / .5fr 3fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lower-part-tech .selection {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.lower-part-tech .selection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lower-part-tech .selection ul li {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: .075rem solid #FFF;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.lower-part-tech .selection ul li:hover, .lower-part-tech .selection ul li.selected {
+  background-color: #FFF;
+  color: #0B0D17;
+}
+
+.lower-part-tech .text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.lower-part-tech .text h2 {
+  text-transform: uppercase;
+  font-size: 56px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.lower-part-tech .text p {
+  font-size: 22px;
+  color: #D0D6F9;
+  width: 75%;
+  line-height: 2;
+}
+
+.lower-part-tech .image {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  bottom: 15%;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  background-repeat: no-repeat;
+  width: 27.5vw;
+  height: auto;
+  overflow: hidden;
+}
+
+.lower-part-tech .image.id-0 {
+  content: url("../../assets/technology/image-launch-vehicle-portrait.jpg");
+}
+
+.lower-part-tech .image.id-1 {
+  content: url("../../assets/technology/image-spaceport-portrait.jpg");
+}
+
+.lower-part-tech .image.id-2 {
+  content: url("../../assets/technology/image-space-capsule-portrait.jpg");
+}
 /*# sourceMappingURL=main.css.map */

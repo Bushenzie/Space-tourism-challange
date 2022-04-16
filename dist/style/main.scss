@@ -396,3 +396,87 @@ body {
     }
 
 }
+
+.lower-part-tech {
+    height: 100%;
+    grid-row: 2 / 3;
+    margin: 0 11.5%;
+    display: grid;
+    grid-template: 1fr / .5fr 3fr 1fr;
+    align-items: center;
+
+    .selection {
+        grid-column: 1 / 2;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: .075rem solid #FFF;
+                border-radius: 100%;
+                width: 5rem;
+                height: 5rem;
+                transition: all .5s;
+
+                &:hover,
+                &.selected {
+                    background-color: #FFF;
+                    color: $dark-color;
+                }
+            }
+        }
+    }
+
+    .text {
+        grid-column: 2 / 3;
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 56px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        p {
+            font-size: 22px;
+            color: $light-color;
+            width: 75%;
+            line-height: 2;
+        }
+    }
+
+    .image {
+        position: absolute;
+        right: 0;
+        top: 30%;
+        bottom: 15%;
+        grid-column: 3 / 4;
+        background-repeat: no-repeat;  
+        width: 27.5vw;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .image.id-0 {
+        content: url("../../assets/technology/image-launch-vehicle-portrait.jpg");
+    }
+
+    .image.id-1 {
+        content: url("../../assets/technology/image-spaceport-portrait.jpg");
+    }
+
+    .image.id-2 {
+        content: url("../../assets/technology/image-space-capsule-portrait.jpg");
+    }
+}

@@ -39,4 +39,12 @@ export class Element {
             engineer: document.querySelector("li#engineer-select"),
         }
     }
+
+    TechSelection() {
+        return {
+            launch: document.querySelector("li#launch-select"),
+            spaceport: document.querySelector("li#spaceport-select"),
+            capsule: document.querySelector("li#capsule-select"),
+        }
+    }
 }

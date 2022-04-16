@@ -23,3 +23,7 @@ if(!Storage.GetCurrentPlanet()) {
 if(!Storage.GetCurrentCrewMem()) {
     Storage.SetCurrentCrewMem(0);
 } 
+
+if(!Storage.GetCurrentTech()) {
+    Storage.SetCurrentTech(0);
+} 

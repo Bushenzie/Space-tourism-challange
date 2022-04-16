@@ -55,6 +55,7 @@ export class Event {
                 </div>
                 `
 
+                Storage.SetCurrentTech(0);
                 Storage.SetCurrentCrewMem(0);
                 Storage.SetCurrentPlanet(0);
                 lowerPart.appendChild(container);
@@ -89,6 +90,7 @@ export class Event {
                     </div>
                     ` 
 
+                Storage.SetCurrentTech(0);
                 Storage.SetCurrentCrewMem(0);
                 lowerPart.appendChild(container);
                 Elements.Content().body.appendChild(lowerPart);
@@ -150,6 +152,7 @@ export class Event {
                 </div>
                 ` 
 
+                Storage.SetCurrentTech(0);
                 Storage.SetCurrentPlanet(0);
                 lowerPart.appendChild(container);
                 Elements.Content().body.appendChild(lowerPart);
@@ -196,17 +199,51 @@ export class Event {
                 container.classList.add("lower-part-tech");
                 container.innerHTML = 
                 `
+                <div class="selection">
+                    <ul id="tech-selection">
+                        <li id="launch-select">1</li>
+                        <li id="spaceport-select">2</li>
+                        <li id="capsule-select">3</li>
+                    </ul>
+                </div>
                 <div class="text">
-                    
+                    <h2 class="heading">${data.technologies[Storage.GetCurrentTech()].name}</h2>
+                    <p class="text">${data.technologies[Storage.GetCurrentTech()].description}</p>
                 </div>
-                <div class="explore">
-                    
-                </div>
+                <img class="image id-${Storage.GetCurrentTech()}"></img>
                 ` 
+
                 Storage.SetCurrentCrewMem(0);
                 Storage.SetCurrentPlanet(0);
                 lowerPart.appendChild(container);
                 Elements.Content().body.appendChild(lowerPart);
+
+                switch(Storage.GetCurrentTech()) {
+                    case "0":
+                        Elements.TechSelection().launch.classList.add("selected");
+                    break;
+                    case "1":
+                        Elements.TechSelection().spaceport.classList.add("selected");
+                    break;
+                    case "2":
+                        Elements.TechSelection().capsule.classList.add("selected");
+                    break;
+                }
+
+                Elements.TechSelection().launch.addEventListener("click",()=> {
+                    Storage.SetCurrentTech(0);
+                    this.LoadPage("technology");;
+                })
+                Elements.TechSelection().spaceport.addEventListener("click",()=> {
+                    Storage.SetCurrentTech(1);
+                    this.LoadPage("technology");
+                })
+
+                Elements.TechSelection().capsule.addEventListener("click",()=> {
+                    Storage.SetCurrentTech(2);
+                    this.LoadPage("technology");
+                })
+
             break;
         }
     }

@@ -30,6 +30,15 @@ export class LC {
         localStorage.setItem("x", id);
     }
 
+    //Tech save
+    GetCurrentTech() {
+        return localStorage.getItem("y");
+    }
+
+    SetCurrentTech(id) {
+        localStorage.setItem("y", id);
+    }
+
     async LoadPage() {
         await this.GetDataFromJSON();        
     }
