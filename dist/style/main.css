@@ -66,7 +66,7 @@ body#technology {
 }
 
 .upper-part .logo img {
-  width: 110%;
+  min-width: 110%;
 }
 
 .upper-part .nav {
@@ -92,7 +92,7 @@ body#technology {
           justify-content: center;
   height: 100%;
   gap: 3rem;
-  padding: 0 15rem 0 10rem;
+  padding: 0 12.5rem 0 9rem;
   margin: 0;
 }
 
@@ -138,10 +138,15 @@ body#technology {
   position: absolute;
   left: 12%;
   opacity: .2;
-  right: 60rem;
+  right: 55rem;
   z-index: 2;
   background-color: #FFF;
   height: 1px;
+}
+
+.lower-part {
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .lower-part-main {
@@ -477,7 +482,7 @@ body#technology {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
-  margin: 0 11.5%;
+  margin: 0 0 0 11.5%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
@@ -486,6 +491,7 @@ body#technology {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
 }
 
 .lower-part-tech .selection {
@@ -560,10 +566,8 @@ body#technology {
 }
 
 .lower-part-tech .image {
-  position: absolute;
+  position: relative;
   right: 0;
-  top: 30%;
-  bottom: 15%;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
@@ -583,5 +587,225 @@ body#technology {
 
 .lower-part-tech .image.id-2 {
   content: url("../../assets/technology/image-space-capsule-portrait.jpg");
+}
+
+@media (max-width: 1024px) {
+  body#home {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  body#destination {
+    background-image: url("../../assets/destination/background-destination-tablet.jpg");
+  }
+  body#crew {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
+  }
+  body#technology {
+    background-image: url("../../assets/technology/background-technology-tablet.jpg");
+  }
+  .upper-part {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .upper-part .logo {
+    margin: 0 7.5vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    height: 65%;
+  }
+  .upper-part .logo img {
+    width: 4rem;
+  }
+  .upper-part .line {
+    display: none;
+  }
+  .upper-part .nav {
+    height: 60%;
+    width: 100%;
+  }
+  .upper-part .nav ul {
+    font-size: 13.5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 5vw;
+  }
+  .lower-part-main {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 1fr / 1fr;
+  }
+  .lower-part-main .text {
+    padding: 0;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    text-align: center;
+    width: 100%;
+  }
+  .lower-part-main .text .text {
+    text-align: center;
+  }
+  .lower-part-main .explore {
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .lower-part-main .explore h2 {
+    margin: 0;
+    padding: 0;
+  }
+  .lower-part-dest {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 1fr / 1fr;
+  }
+  .lower-part-dest .planet-image {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .lower-part-dest .planet-image img {
+    min-width: 30%;
+    max-width: 50%;
+  }
+  .lower-part-dest .text {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .lower-part-dest .text .text {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+  .lower-part-dest .text .heading {
+    font-size: 135px;
+  }
+  .lower-part-dest .text .info h3 {
+    white-space: nowrap;
+  }
+  .lower-part-crew {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 1fr / 1fr;
+  }
+  .lower-part-crew .text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    text-align: center;
+  }
+  .lower-part-crew .text .text {
+    width: 100%;
+  }
+  .lower-part-crew .text ul {
+    margin-top: 20%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .lower-part-crew .person {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    position: relative;
+    max-height: 130%;
+    min-height: 125%;
+  }
+  .lower-part-tech {
+    margin: 0;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 2fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 2fr 1fr 1fr / 1fr;
+  }
+  .lower-part-tech .image {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+  }
+  .lower-part-tech .image.id-0 {
+    content: url("../../assets/technology/image-launch-vehicle-landscape.jpg");
+  }
+  .lower-part-tech .image.id-1 {
+    content: url("../../assets/technology/image-spaceport-landscape.jpg");
+  }
+  .lower-part-tech .image.id-2 {
+    content: url("../../assets/technology/image-space-capsule-landscape.jpg");
+  }
+  .lower-part-tech .selection {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .lower-part-tech .selection ul {
+    gap: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .lower-part-tech .text {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    width: 100%;
+    text-align: center;
+  }
+  .lower-part-tech .text .text {
+    text-align: center;
+    margin: 0 auto 20%;
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

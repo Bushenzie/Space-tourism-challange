@@ -55,7 +55,8 @@ body {
         margin-left: 5vw;
 
         img {
-            width: 110%;
+            min-width: 110%;
+
         }
     }
 
@@ -75,7 +76,7 @@ body {
             justify-content: center;
             height: 100%;
             gap: 3rem;
-            padding: 0 15rem 0 10rem;
+            padding: 0 12.5rem 0 9rem;
             margin: 0;
 
             li {
@@ -120,13 +121,16 @@ body {
         position: absolute;
         left: 12%;
         opacity: .2;
-        right: 60rem;
+        right: 55rem;
         z-index: 2;
         background-color: #FFF;
         height: 1px;
     }
 }
 
+.lower-part {
+    transition: all 1s ease-in; 
+}
 
 .lower-part-main {
     grid-row: 2 / 3;
@@ -400,10 +404,11 @@ body {
 .lower-part-tech {
     height: 100%;
     grid-row: 2 / 3;
-    margin: 0 11.5%;
+    margin: 0 0 0 11.5%;
     display: grid;
     grid-template: 1fr / .5fr 3fr 1fr;
     align-items: center;
+    justify-items: center;
 
     .selection {
         grid-column: 1 / 2;
@@ -457,10 +462,8 @@ body {
     }
 
     .image {
-        position: absolute;
+        position: relative;
         right: 0;
-        top: 30%;
-        bottom: 15%;
         grid-column: 3 / 4;
         background-repeat: no-repeat;  
         width: 27.5vw;
@@ -478,5 +481,212 @@ body {
 
     .image.id-2 {
         content: url("../../assets/technology/image-space-capsule-portrait.jpg");
+    }
+}
+
+
+@media (max-width: $tablet-max-width) {
+    body#home {
+        background-image: url("../../assets/home/background-home-tablet.jpg");
+    }
+
+    body#destination {
+        background-image: url("../../assets/destination/background-destination-tablet.jpg");
+    }
+
+    body#crew {
+        background-image: url("../../assets/crew/background-crew-tablet.jpg");
+    }
+    
+    body#technology {
+        background-image: url("../../assets/technology/background-technology-tablet.jpg")
+    }
+
+
+    .upper-part {
+        align-items: flex-start;
+        width: 100%;
+
+        .logo {
+            margin: 0 7.5vw;
+            align-self: center;
+            justify-self: center;
+            height: 65%;
+            
+            img {
+                width: 4rem;
+            }
+        }
+
+        .line {
+            display: none;
+        }
+
+        .nav {
+            height: 60%;
+            width: 100%;
+
+            ul {
+                font-size: 13.5px;
+                box-sizing: border-box;
+                padding: 0 5vw;
+            }
+        }
+    }
+
+    .lower-part-main {
+        position: absolute;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+
+        .text {
+            padding: 0;
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            text-align: center;
+            width: 100%;
+
+            .text {
+                text-align: center;
+            }
+        }
+
+        .explore {
+            top: 20%;
+            right: 0;
+            bottom: 0;
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .lower-part-dest {
+        position: absolute;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+
+
+        .planet-image {
+            grid-row: 1 / 2;
+            
+            img {
+                min-width: 30%;
+                max-width: 50%;
+            }
+        }
+
+        .text {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            grid-row: 2 / 3;
+            text-align: center;
+            align-items: center;
+
+            .text {
+                font-size: 18px;
+                line-height: 1.75;
+            }
+
+            .heading {
+                font-size: 135px;
+            }
+
+            .info {
+                h3 {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+
+    }
+
+    .lower-part-crew {
+        position: absolute;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+
+        .text {
+            grid-row: 1 / 2;
+            text-align: center;
+
+            .text {
+                width: 100%;
+            }
+
+            ul{
+                margin-top: 20%;
+                justify-content: center;
+            }
+        }
+
+        .person{
+            grid-row: 2 / 3;
+            position: relative;
+            max-height: 130%;
+            min-height: 125%;
+        }
+    }
+
+
+    .lower-part-tech {
+        margin: 0;
+        position: absolute;
+        display: grid;
+        grid-template: 2fr 1fr 1fr / 1fr;
+
+
+        .image {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .image.id-0 {
+            content: url("../../assets/technology/image-launch-vehicle-landscape.jpg");
+        }
+    
+        .image.id-1 {
+            content: url("../../assets/technology/image-spaceport-landscape.jpg");
+        }
+    
+        .image.id-2 {
+            content: url("../../assets/technology/image-space-capsule-landscape.jpg");
+        }
+        
+    
+        .selection {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            
+            ul {
+                gap: 1rem;
+                flex-direction: row;
+            }
+        }
+
+        .text {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+            width: 100%;
+            text-align: center;
+
+            .text {
+                text-align: center;
+                margin: 0 auto 20%;
+                width: 80%;
+            }
+        }
     }
 }

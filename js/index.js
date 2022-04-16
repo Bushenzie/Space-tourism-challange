@@ -9,12 +9,12 @@ export const Elements = new Element();
 
 Events.SetNav();
 
+
+
 if(!Storage.GetCurrentPage()) {
     Storage.SetCurrentPage("home");
     Storage.SetCurrentPlanet(0);
 }   
-
-Storage.LoadPage();
 
 if(!Storage.GetCurrentPlanet()) {
     Storage.SetCurrentPlanet(0);
@@ -26,4 +26,6 @@ if(!Storage.GetCurrentCrewMem()) {
 
 if(!Storage.GetCurrentTech()) {
     Storage.SetCurrentTech(0);
-} 
+}
+
+Storage.LoadPage();

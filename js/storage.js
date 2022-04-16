@@ -39,8 +39,8 @@ export class LC {
         localStorage.setItem("y", id);
     }
 
-    async LoadPage() {
-        await this.GetDataFromJSON();        
+    LoadPage() {
+        this.GetDataFromJSON();        
     }
 
 

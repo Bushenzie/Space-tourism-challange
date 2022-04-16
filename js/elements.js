@@ -37,6 +37,7 @@ export class Element {
             mission: document.querySelector("li#mission-select"),
             pilot: document.querySelector("li#pilot-select"),
             engineer: document.querySelector("li#engineer-select"),
+            pic: document.querySelector(".person"),
         }
     }
 
