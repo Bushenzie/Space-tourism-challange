@@ -12,11 +12,14 @@ Events.SetNav();
 if(!Storage.GetCurrentPage()) {
     Storage.SetCurrentPage("home");
     Storage.SetCurrentPlanet(0);
-    Storage.LoadPage();
-} else {
-    Storage.LoadPage();
-}
+}   
+
+Storage.LoadPage();
 
 if(!Storage.GetCurrentPlanet()) {
     Storage.SetCurrentPlanet(0);
+} 
+
+if(!Storage.GetCurrentCrewMem()) {
+    Storage.SetCurrentCrewMem(0);
 } 

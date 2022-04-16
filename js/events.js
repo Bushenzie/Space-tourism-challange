@@ -55,6 +55,7 @@ export class Event {
                 </div>
                 `
 
+                Storage.SetCurrentCrewMem(0);
                 Storage.SetCurrentPlanet(0);
                 lowerPart.appendChild(container);
                 Elements.Content().body.appendChild(lowerPart);
@@ -65,7 +66,7 @@ export class Event {
             break;
             case "destination":
                 lowerPart.classList.add("lower-part");
-                container.classList.add("lower-part-dist");
+                container.classList.add("lower-part-dest");
                 container.innerHTML = 
                     `
                     <div class="planet-image">
@@ -87,6 +88,8 @@ export class Event {
                         </div>
                     </div>
                     ` 
+
+                Storage.SetCurrentCrewMem(0);
                 lowerPart.appendChild(container);
                 Elements.Content().body.appendChild(lowerPart);
 
@@ -124,25 +127,69 @@ export class Event {
                     this.LoadPage("destination");
                 })
                 
-
-
             break;
+
             case "crew": 
                 lowerPart.classList.add("lower-part");
                 container.classList.add("lower-part-crew");
                 container.innerHTML = 
                 `
                 <div class="text">
-                    
+                    <h3 class="sub-heading">${data.crew[Number(Storage.GetCurrentCrewMem())].role}</h3>
+                    <h1 class="heading">${data.crew[Number(Storage.GetCurrentCrewMem())].name}</h1>
+                    <p class="text">${data.crew[Number(Storage.GetCurrentCrewMem())].bio}</p>
+                    <ul id="person-select">
+                        <li id="commander-select"></li>
+                        <li id="mission-select"></li>
+                        <li id="pilot-select"></li>
+                        <li id="engineer-select"></li>
+                    </ul>
                 </div>
-                <div class="explore">
-                    
+                <div class="person">
+                    <img src="${data.crew[Number(Storage.GetCurrentCrewMem())].images.png}">
                 </div>
                 ` 
 
                 Storage.SetCurrentPlanet(0);
                 lowerPart.appendChild(container);
                 Elements.Content().body.appendChild(lowerPart);
+
+                switch(Storage.GetCurrentCrewMem()) {
+                    case "0":
+                        Elements.CrewSelection().commander.classList.add("selected");
+                    break;
+                    case "1":
+                        Elements.CrewSelection().mission.classList.add("selected");
+                    break;
+                    case "2":
+                        Elements.CrewSelection().pilot.classList.add("selected");
+                    break;
+                    case "3":
+                        Elements.CrewSelection().engineer.classList.add("selected");
+                    break;
+                }
+
+                Elements.CrewSelection().commander.addEventListener("click",()=> {
+                    Storage.SetCurrentCrewMem(0);
+                    this.LoadPage("crew");;
+                })
+                Elements.CrewSelection().mission.addEventListener("click",()=> {
+                    Storage.SetCurrentCrewMem(1);
+                    this.LoadPage("crew");
+                })
+
+                Elements.CrewSelection().pilot.addEventListener("click",()=> {
+                    Storage.SetCurrentCrewMem(2);
+                    this.LoadPage("crew");
+                })
+
+                Elements.CrewSelection().engineer.addEventListener("click",()=> {
+                    Storage.SetCurrentCrewMem(3);
+                    this.LoadPage("crew");
+                })
+
+
+
             break;
             case "technology": 
                 lowerPart.classList.add("lower-part");
@@ -156,6 +203,7 @@ export class Event {
                     
                 </div>
                 ` 
+                Storage.SetCurrentCrewMem(0);
                 Storage.SetCurrentPlanet(0);
                 lowerPart.appendChild(container);
                 Elements.Content().body.appendChild(lowerPart);

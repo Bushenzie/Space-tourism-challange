@@ -30,4 +30,13 @@ export class Element {
             titan: document.querySelector("li#titan-select"),
         }
     }
+
+    CrewSelection() {
+        return {
+            commander: document.querySelector("li#commander-select"),
+            mission: document.querySelector("li#mission-select"),
+            pilot: document.querySelector("li#pilot-select"),
+            engineer: document.querySelector("li#engineer-select"),
+        }
+    }
 }

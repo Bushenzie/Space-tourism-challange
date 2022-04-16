@@ -3,6 +3,7 @@ import { Events } from "./index";
 export class LC {
     constructor() {}
 
+    //Page save
     GetCurrentPage() {
         return localStorage.getItem("page");
     }
@@ -11,6 +12,7 @@ export class LC {
         localStorage.setItem("page", page);
     }
 
+    //Planet save
     GetCurrentPlanet() {
         return localStorage.getItem("i");
     }
@@ -19,16 +21,26 @@ export class LC {
         localStorage.setItem("i", id);
     }
 
+    //Crew save
+    GetCurrentCrewMem() {
+        return localStorage.getItem("x");
+    }
+
+    SetCurrentCrewMem(id) {
+        localStorage.setItem("x", id);
+    }
+
     async LoadPage() {
         await this.GetDataFromJSON();        
     }
+
 
     GetDataFromJSON() {
         FetchData()
             .then(results => {
                 Events.SwitchPage(localStorage.getItem("page"),results);
-            }).catch(() => {
-                console.log("error");
+            }).catch(err => {
+                console.log(err);
             })
 
         async function FetchData() {
@@ -36,8 +48,8 @@ export class LC {
             const jsonData = await fetched.json();
             return {
                 destinations: jsonData.destinations,
+                crew: jsonData.crew,
                 technologies: jsonData.technology,
-                crew: jsonData.crew
             };
         }
 
