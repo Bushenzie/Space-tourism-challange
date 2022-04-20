@@ -4,5 +4,5 @@ This repo is for Challange from [Frontend Mentor](https://www.frontendmentor.io/
 Responsive preview -> [Live Preview](https://bushenzie.github.io/Space-tourism-challange/dist/)
 
 Technology used:
--Webpack
--HTML/SCSS + Vanilla JS
+*Webpack
+*HTML/SCSS + Vanilla JS
